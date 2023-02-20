@@ -146,9 +146,6 @@ app.post('/loginpage', (req, res) => {
         username = null;
      user.find({email:req.body.email}).then((result) =>{
         username=result[0].username;
-        console.log(req.body.email);
-        console.log(req.body.password);
-        console.log(result[0].password);
         if(result[0].password === req.body.password){
             console.log('so Redirectt');
             return res.redirect('/ProductPage');
