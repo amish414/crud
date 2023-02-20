@@ -1,0 +1,129 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/addvehicle.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/editpage/<%= users[0].primaryKey %>" method="post">
+   <div>
+    <div> 
+        <h3> <%=users[0].Vechicle_SR_NO%></h3>
+    </div>
+
+    <div>
+        <h4>vehcile sr no.</h4>
+        <input type="text", name="Vehiclesr" placeholder="<%= users[0].Vechicle_SR_NO %>">
+    </div>
+    <div>
+        <h4> creadted date</h4>
+        <label> <%= users[0].CreatedDate%></label>
+    </div>
+    <div>
+        <h4> crated by</h4>
+        <label> <%=users[0].CreatedBy%></label>
+    </div>
+    <div>
+        
+        <%if(typeof users[0].ModifiedBy === 'string'){ %>
+            <h4>Modified By</h4>
+            <label><%= users[0].ModifiedBy %></label>
+        <%} %>
+    </div>
+    <input type="submit" value="save">
+   </div>
+</form>
+</body>
+</html>
+
+ -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+    <link rel="stylesheet" href="css/addvehicle.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <!-- <div class="navbar-header">
+            <a class="navbar-brand" href="ProductPage">Welcom to Home Page</a>
+          </div> -->
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/ProductPage">Home</a></li>
+            <li><a href="/addDriver">Add Vehicle</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span><%= user1%></a></li>
+            <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          </ul>
+        </div>
+
+      </nav>
+   
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-lg-3 col-md-offset-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Edit Details
+                    </div>
+                    <div class="panel-body">
+                            <form method ='post' action="/editpage/<%= users[0].primaryKey %>">
+                            <div class="form-group">
+                                <h3><%=users[0].Vechicle_SR_NO%></h3>
+                                <label for="sr-no">Sr- NO *</label>
+                                
+                                <input  name="Vehiclesr" class="form-control" type="text" placeholder="<%=users[0].Vechicle_SR_NO%>" >
+
+                                <div class="form-group">
+                                    <label for="created">CreatedBy:: </label>
+                                    <label ><%=users[0].CreatedBy%></label>
+                                </div>   
+                            </div>    
+                            <div class="form-group">
+                                <label for="CreatedDate">CreatedDate::   </label>
+                                <label ><%=users[0].CreatedDate %></label>
+                            </div>
+                             
+                            <div>
+                            <%if(typeof users[0].ModifiedBy === 'string'){ %>
+                                <label for="created">ModifiedBy:: </label>
+                                <label><%= users[0].ModifiedBy %></label>
+                            <%} %>
+                            </div>
+
+                            <div>
+                            <%if(typeof users[0].ModifiedDate === 'string'){ %>
+                                <label for="created">ModifiedDate:: </label>
+                                <label><%= users[0].ModifiedDate %></label>
+                            <%} %>
+                            </div>
+
+                            <button id="submit" type="submit" value="submit" class="btn btn-primary center">Submit</button>
+
+                           </form>
+                       </div>
+                    </div>
+                </div>
+            </div>
+         </body>
+    </html>

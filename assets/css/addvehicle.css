@@ -1,0 +1,27 @@
+/* html,body{background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;font-family: 'Numans', sans-serif;
+} */
+/* .vehicle-class{
+    display: flex;
+    background-color: aqua;
+}
+.text-box-class{
+    height: 20px;
+    margin-top: 15px;
+} */
+
+.palel-primary
+{
+    border-color: #bce8f1;
+}
+.panel-primary>.panel-heading
+{
+    background:#bce8f1;
+    
+}
+.panel-primary>.panel-body
+{
+    background-color: #EDEDED;
+}

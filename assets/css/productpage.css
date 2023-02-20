@@ -1,0 +1,10 @@
+.container{
+    align-items: center;
+}
+.custab:hover{
+box-shadow: 3px 3px 0px transparent;
+transition: 0.5s;
+}
+table {
+font-size: 20px;
+}
